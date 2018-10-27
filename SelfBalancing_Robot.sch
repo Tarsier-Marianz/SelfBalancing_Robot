@@ -44,17 +44,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ArduinoNano U1
-U 1 1 5BD2E66E
-P 2700 3050
-F 0 "U1" H 2700 3050 60  0000 C CNN
-F 1 "ArduinoNano" H 2700 2200 60  0000 C CNN
-F 2 "Modules:Arduino_Nano" H 2700 3050 60  0001 C CNN
-F 3 "" H 2700 3050 60  0001 C CNN
-	1    2700 3050
-	1    0    0    -1  
-$EndComp
-$Comp
 L L293D U2
 U 1 1 5BD2F5EF
 P 4800 2800
@@ -305,10 +294,10 @@ Wire Wire Line
 	2050 1700 3850 1700
 Connection ~ 2100 1700
 $Comp
-L PWR_FLAG #FLG01
+L PWR_FLAG #FLG1
 U 1 1 5BD33C8E
 P 2100 1200
-F 0 "#FLG01" H 2100 1295 50  0001 C CNN
+F 0 "#FLG1" H 2100 1295 50  0001 C CNN
 F 1 "PWR_FLAG" H 2100 1380 50  0000 C CNN
 F 2 "" H 2100 1200 50  0000 C CNN
 F 3 "" H 2100 1200 50  0000 C CNN
@@ -405,7 +394,6 @@ NoConn ~ 3150 3550
 NoConn ~ 3150 3750
 NoConn ~ 2200 2950
 NoConn ~ 2200 2850
-NoConn ~ 2200 2750
 NoConn ~ 2200 2550
 $Comp
 L R R1
@@ -437,4 +425,42 @@ Wire Wire Line
 	1400 3350 1450 3350
 Wire Wire Line
 	1750 3350 2200 3350
+$Comp
+L CONN_01X03 P6
+U 1 1 5BD3DF73
+P 2100 4650
+F 0 "P6" H 2100 4850 50  0000 C CNN
+F 1 "CONN_01X03" V 2200 4650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2100 4650 50  0001 C CNN
+F 3 "" H 2100 4650 50  0000 C CNN
+	1    2100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4550 1900 4550
+Wire Wire Line
+	1550 4650 1900 4650
+Wire Wire Line
+	1550 4750 1900 4750
+Text Label 1550 4550 0    60   ~ 0
+GND
+Text Label 1550 4650 0    60   ~ 0
+5V
+Text Label 1550 4750 0    60   ~ 0
+PWM
+$Comp
+L ArduinoNano U1
+U 1 1 5BD2E66E
+P 2700 3050
+F 0 "U1" H 2700 3050 60  0000 C CNN
+F 1 "ArduinoNano" H 2700 2200 60  0000 C CNN
+F 2 "Modules:Arduino_Nano" H 2700 3050 60  0001 C CNN
+F 3 "" H 2700 3050 60  0001 C CNN
+	1    2700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2750 2200 2750
+Text Label 1850 2750 0    60   ~ 0
+PWM
 $EndSCHEMATC
